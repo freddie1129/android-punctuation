@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f64b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="myWelcome">#f6fcff</color>
+    <color name="myButton">#b4b6b8</color>
+    <color name="myvoice">#9363f942</color>
+    <color name="myTest">#bae7f7</color>
+    <color name="myWelcomeButton">#f6f4f4</color>
+    <color name="myAnswer">#a1e3ff</color>
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">英语符号</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="math">"数学符号"</string>
+    <string name="exit">"退出"</string>
+    <string name="allsymbol">"    All    "</string>
+    <string name="test">测验</string>
+    <string name="punctuation">"标点符号"</string>
+    <string name="punctuationUnit">个</string>
+    <string name="greekalph">"希腊字母"</string>
+
+    <string name="title_activity_welcome">Learning Symbols</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="AD_Unit_ID">ca-app-pub-2373746499025999/6372347568</string>
+</resources>

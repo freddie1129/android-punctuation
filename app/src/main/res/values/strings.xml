@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Symbols</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="punctuation">"Punctuations"</string>
+    <string name="punctuationUnit"></string>
+    <string name="greekalph">"Greek Alphabets"</string>
+    <string name="math">"Math"</string>
+    <string name="exit">"Exit"</string>
+    <string name="allsymbol">"    All    "</string>
+
+
+
+
+    <string name="title_activity_welcome">Learning Symbols</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="test">Quiz</string>
+    <string name="AD_Unit_ID">ca-app-pub-2373746499025999/6372347568</string>
+</resources>

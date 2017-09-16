@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/button_main_punctuation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@color/myWelcome"
+        android:onClick="onClickPunctuation"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="@string/punctuation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/common_google_signin_btn_text_light_focused"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_main_greek"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.51"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/button_main_greek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/myWelcome"
+        android:onClick="onClickGreek"
+        android:text="@string/greekalph"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/common_google_signin_btn_text_light_focused"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/button_main_punctuation"
+        app:layout_constraintRight_toRightOf="@+id/button_main_punctuation"
+        app:layout_constraintTop_toBottomOf="@+id/button_main_punctuation"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/textView_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif"
+        android:text="Welcome"
+        android:textAllCaps="false"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@+id/button_main_greek"
+        app:layout_constraintTop_toTopOf="@+id/button_main_punctuation" />
+
+    <TextView
+        android:id="@+id/textView_puncintro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="28 punctuations"
+        android:textColor="@color/myWelcome"
+        app:layout_constraintBottom_toBottomOf="@+id/button_main_punctuation"
+        app:layout_constraintLeft_toRightOf="@+id/button_main_punctuation" />
+
+    <TextView
+        android:id="@+id/textView_greekintro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="24 greek alphabet"
+        android:textColor="@color/myWelcome"
+        app:layout_constraintBottom_toBottomOf="@+id/button_main_greek"
+        app:layout_constraintLeft_toRightOf="@+id/button_main_greek" />
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/myWelcome"
+        android:onClick="onExit"
+        android:text="@string/exit"
+        android:textColor="@color/common_google_signin_btn_text_light_focused"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_greekintro"
+        app:layout_constraintLeft_toRightOf="@+id/textView_greekintro"
+        android:layout_marginLeft="8dp" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/AD_Unit_ID"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintLeft_toLeftOf="parent"></com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:id="@+id/textView_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="3dp"
+        android:text="Powered by Freddie"
+        android:textColor="@color/myWelcomeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+</android.support.constraint.ConstraintLayout>

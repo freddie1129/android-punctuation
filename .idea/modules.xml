@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android-punctuation.iml" filepath="$PROJECT_DIR$/.idea/modules/android-punctuation.iml" group="android-punctuation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android-punctuation-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android-punctuation-app.iml" group="android-punctuation/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/punctuation.iml" filepath="$PROJECT_DIR$/punctuation.iml" />
     </modules>

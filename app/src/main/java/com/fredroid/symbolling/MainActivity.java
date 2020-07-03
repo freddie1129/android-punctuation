@@ -1,21 +1,25 @@
 package com.fredroid.symbolling;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
-import com.fredroid.symbolling.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
-    private AdView mAdView;
-    private AdRequest mAdRequest;
 
-    public  int mMode;
+
+    public int mMode;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,53 +27,24 @@ public class MainActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        mMode = intent.getIntExtra(FirstActivity.FUNC_TYPE,1);
-     //   TextView textView = new TextView(this);
-
-
-/*        ListView list = (ListView) findViewById(R.id.listname);
-        Symbol s1 = new Symbol(",","Comma","lkd");
-        Symbol s2 = new Symbol(";","Simcoma","ddfs");
-        ArrayList<Symbol> symbolList = new ArrayList<Symbol>();
-        symbolList.add(s1);
-        symbolList.add(s2);
-       final SymbolAdapter adapter = new SymbolAdapter(this,symbolList);
-        list.setAdapter(adapter);*/
-        // final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.testitem, DataSourse.Headlines);
-       // list.setAdapter(adapter);
-        MobileAds.initialize(this,"ca-app-pub-2373746499025999/6372347568");
-        mAdView = (AdView) findViewById(R.id.adView3);
-        if (BuildConfig.DEBUG)
-        {
-            mAdRequest = new AdRequest.Builder().addTestDevice("E56CCA964C2058652B8E19C7DE84EFFB")
-                    .build();}
-        else
-        {
-            mAdRequest = new AdRequest.Builder().build();
-        }
-        mAdView.loadAd(mAdRequest);
+        mMode = intent.getIntExtra(FirstActivity.FUNC_TYPE, 1);
 
 
 
-
-
-        if (findViewById(R.id.fragment_container) != null)
-        {
-            if (savedInstanceState != null)
-            {
+        if (findViewById(R.id.fragmnt_container) != null) {
+            if (savedInstanceState != null) {
                 return;
             }
             Headline headlinefragment = new Headline();
             headlinefragment.setMode(mMode);
-           getSupportFragmentManager().beginTransaction()
-                   .add(R.id.fragment_container, headlinefragment).commit();
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragmnt_container, headlinefragment).commit();
 
         }
 
     }
 
-    public void onClickTestButton(View view)
-    {
+    public void onClickTestButton(View view) {
         Intent intent = new Intent(this, PunctuationTestActivity.class);/*
         EditText editText = (EditText) findViewById(R.id.editText);
         String message = editText.getText().toString();*/
@@ -77,29 +52,34 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     @Override
-    public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
-        super.onPause();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
-    /** Called when returning to the activity */
     @Override
-    public void onResume() {
-        super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.menu_about) {
+            AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+            alertDialog.setTitle("About");
+            alertDialog.setMessage(Html.fromHtml("<b/><p>Developer: <a href=\"mailto:freddiechenchen@gmail.com\">freddiechenchen@gmail.com</a></p>" +
+                    "<p>Source Code:<a href=\"https://github.com/freddie1129/android-punctuation\">Github</a></p>"));
+            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    });
+            alertDialog.show();
+            TextView v = alertDialog.findViewById(android.R.id.message);
+            v.setMovementMethod(LinkMovementMethod.getInstance());
+            return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
 
-    /** Called before the activity is destroyed */
-    @Override
-    public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
-        super.onDestroy();
-    }
+
 }

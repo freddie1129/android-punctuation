@@ -5,7 +5,6 @@ package com.fredroid.symbolling;
  */
 
 
-
 public class DataSourse {
 
     static String[] Headlines = {

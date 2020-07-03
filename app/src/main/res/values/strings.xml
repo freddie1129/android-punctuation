@@ -18,4 +18,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="test">Quiz</string>
     <string name="AD_Unit_ID">ca-app-pub-2373746499025999/6372347568</string>
+    <string name="t_about">About</string>
 </resources>

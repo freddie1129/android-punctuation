@@ -7,6 +7,7 @@ package com.fredroid.symbolling;
 public class Symbol {
     public String strmark;
     public String strspell;
+
     public Symbol(String strmark, String strspell) {
         this.strmark = strmark;
         this.strspell = strspell;

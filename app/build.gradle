@@ -7,7 +7,7 @@ android {
         applicationId "com.fredroid.symbolling"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 6
+        versionCode 7
         versionName "1.$versionCode"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }

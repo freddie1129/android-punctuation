@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fredroid.symbolling"
-    android:versionCode="1"
-    android:versionName="1.0">
+>
 
     <application
         android:allowBackup="true"
@@ -11,20 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-
         <activity
             android:name="com.fredroid.symbolling.MainActivity"
             android:parentActivityName="com.fredroid.symbolling.FirstActivity">
-
-            <!--
-            intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter
-            -->
         </activity>
         <activity android:name="com.fredroid.symbolling.FirstActivity">
             <intent-filter>
@@ -33,12 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.fredroid.symbolling.PunctuationTestActivity"
-            android:parentActivityName="com.fredroid.symbolling.MainActivity"
+        <activity
+            android:name="com.fredroid.symbolling.PunctuationTestActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            >
-            <!--android:screenOrientation="portrait"-->
-
+            android:parentActivityName="com.fredroid.symbolling.MainActivity">
         </activity>
     </application>
 

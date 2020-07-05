@@ -60,7 +60,7 @@
         android:text="Welcome"
         android:textAllCaps="false"
         android:textColor="@color/colorText"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button_main_punctuation"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -88,19 +88,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/button_main_greek"
         app:layout_constraintLeft_toRightOf="@+id/button_main_greek" />
 
-    <Button
-        android:id="@+id/button_exit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/myWelcome"
-        android:onClick="onExit"
-        android:text="@string/exit"
-        android:textColor="@color/colorText"
-        android:textStyle="bold"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_greekintro"
-        android:layout_marginRight="0dp"
-        app:layout_constraintRight_toRightOf="@+id/textView_greekintro" />
+
 
 
     <TextView

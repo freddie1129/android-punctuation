@@ -14,10 +14,10 @@ android {
 
     signingConfigs {
         release {
-            keyAlias 'key0'
-            keyPassword 'Freddie19820629'
+            keyAlias ''
+            keyPassword ''
             storeFile file('../symbolling.jks')
-            storePassword 'Freddie19820629'
+            storePassword ''
         }
     }
     

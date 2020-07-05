@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         mMode = intent.getIntExtra(FirstActivity.FUNC_TYPE, 1);
 
 
-
         if (findViewById(R.id.fragmnt_container) != null) {
             if (savedInstanceState != null) {
                 return;
@@ -45,9 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickTestButton(View view) {
-        Intent intent = new Intent(this, PunctuationTestActivity.class);/*
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();*/
+        Intent intent = new Intent(this, PunctuationTestActivity.class);
         intent.putExtra(FirstActivity.FUNC_TYPE, mMode);
         startActivity(intent);
     }

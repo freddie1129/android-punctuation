@@ -9,10 +9,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by Administrator on 24/07/2017.
- */
-
 public class SymbolAdapter extends ArrayAdapter<Symbol> {
 
     public SymbolAdapter(Context context, ArrayList<Symbol> users) {

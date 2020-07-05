@@ -26,25 +26,16 @@ public class FirstActivity extends Activity {
     }
 
     public void onClickPunctuation(View view) {
-        Intent intent = new Intent(this, MainActivity.class);/*
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();*/
+        Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra(FUNC_TYPE, FUNC_SYMBOL);
         startActivity(intent);
     }
 
 
-
     public void onClickGreek(View view) {
-        Intent intent = new Intent(this, MainActivity.class);/*
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();*/
+        Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra(FUNC_TYPE, FUNC_GREEK);
         startActivity(intent);
-    }
-
-    public void onExit(View view) {
-        finish();
     }
 
 

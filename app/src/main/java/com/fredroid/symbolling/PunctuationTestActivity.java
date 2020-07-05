@@ -80,7 +80,6 @@ public class PunctuationTestActivity extends AppCompatActivity {
         tvIndex.setText(mstrNum);
 
 
-
     }
 
 
@@ -103,7 +102,6 @@ public class PunctuationTestActivity extends AppCompatActivity {
         return mansList.indexOf(3);   //
     }
 
-    //Create a question randomly, the first three are wrong, and the last one is always the right answer
     public int[] generateQuestion(int quesIndex) {
         int[] questionCollection = new int[4];
         Collections.shuffle(mquestionList);
@@ -117,8 +115,6 @@ public class PunctuationTestActivity extends AppCompatActivity {
         questionCollection[3] = quesIndex;      //Last one always is the index of question's answer
         return questionCollection;
     }
-
-
 
 
     public void nextQuestion(int Answer, String txt) {
